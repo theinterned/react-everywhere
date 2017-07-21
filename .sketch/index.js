@@ -3,32 +3,36 @@ import { render, Artboard, View } from 'react-sketchapp';
 import Button from '../src/Button';
 
 const color = 'blue';
+
+const theme = {
+  backgroundColor: color,
+  borderColor: color,
+  color: 'white'
+};
+
+const viewStyle = {
+  width: 800,
+  display: 'flex',
+  flexDirection: 'row',
+  border: '1px solid red'
+};
+
 const artboardStyle = {
-  flex: 1,
-  width: 300,
-}
+  width: 200
+};
 
 export default context => {
   render(
-    <View
-      name='Button'
-      style={{
-        width: 800,
-        display: 'flex',
-        border: '1px solid red',
-      }}
-    >
+    <View name="Button" style={viewStyle}>
+
       <Artboard name="Button" style={artboardStyle}>
         <Button>A Button</Button>
       </Artboard>
 
-      <Artboard name="Themed Button" style={{ ...artboardStyle, top: 300}}>
-        <Button theme={{
-          backgroundColor: color,
-          borderColor: color,
-          color: 'white',
-        }}>Themed Button</Button>
+      <Artboard name="Themed Button" style={artboardStyle}>
+        <Button theme={theme}>Themed Button</Button>
       </Artboard>
+
     </View>,
     context.document.currentPage()
   );
