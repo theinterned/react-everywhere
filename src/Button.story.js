@@ -25,4 +25,13 @@ storiesOf('Button', module)
     <Button>So much Button</Button>
     <Button>Give me Button</Button>
   </View>
+))
+.add('Styled button', () => (
+  <Button
+    color="white"
+    borderColor="pink"
+    backgroundColor="rebeccapurple"
+  >
+    A styled Button
+  </Button>
 ));
