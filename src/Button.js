@@ -2,14 +2,15 @@ import styled from 'styled-components/primitives';
 
 const color = 'blue';
 const backgroundColor = 'white';
+const borderColor = color;
 
 const theme = {
   backgroundColor,
-  borderColor: color,
+  borderColor,
   color
 };
 
-const ButtonText = styled.Text`
+const Button = styled.Text`
   display: inline-block;
   flex: 1;
   padding: 10px 30px;
@@ -19,8 +20,9 @@ const ButtonText = styled.Text`
   border: 2px solid ${props => props.theme.borderColor};
   border-radius: 4px;
 `;
-ButtonText.defaultProps = {
+
+Button.defaultProps = {
   theme
 };
 
-export default ButtonText;
+export default Button;
