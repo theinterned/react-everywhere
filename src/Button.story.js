@@ -26,12 +26,11 @@ storiesOf('Button', module)
     <Button>Give me Button</Button>
   </View>
 ))
-.add('Styled button', () => (
-  <Button
-    color="white"
-    borderColor="pink"
-    backgroundColor="rebeccapurple"
-  >
-    A styled Button
-  </Button>
-));
+.add('Styled button', () => {
+  const theme = {
+    color: "white",
+    borderColor: "pink",
+    backgroundColor: "rebeccapurple",
+  };
+  return <Button theme={theme}>A styled Button</Button>;
+});
