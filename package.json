@@ -1,24 +1,52 @@
 {
-  "name": "icons-everywhere",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "prettier": "^1.5.3",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-primitives": "^0.4.3",
-    "react-scripts": "1.0.10",
-    "styled-components": "^2.1.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "devDependencies": {
-    "@storybook/react": "^3.1.9"
-  }
+	"name": "icons-everywhere",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"prettier": "^1.5.3",
+		"react": "^15.6.1",
+		"react-dom": "^15.6.1",
+		"react-primitives": "^0.4.3",
+		"react-scripts": "1.0.10",
+		"react-sketchapp": "^0.11.6",
+		"react-test-renderer": "^15.6.1",
+		"skpm": "^0.10.2",
+		"styled-components": "^2.1.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook",
+		"sketch-build": "skpm build",
+		"sketch-watch": "skpm build --watch",
+		"sketch-render": "skpm build --watch --run",
+		"sketch-render:once": "skpm build --run",
+		"sketch-link-plugin": "skpm link",
+		"publish": "skpm publish"
+	},
+	"devDependencies": {
+		"@storybook/react": "^3.1.9"
+	},
+	"description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/theinterned/icons-everywhere.git"
+	},
+	"author": "Ned Schwartz",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/theinterned/icons-everywhere/issues"
+	},
+	"homepage": "https://github.com/theinterned/icons-everywhere#readme",
+	"engines": {
+		"sketch": ">=3.0"
+	},
+	"skpm": {
+		"manifest": "./.sketch/manifest.json",
+		"main": "plugin.sketchplugin"
+	}
 }
