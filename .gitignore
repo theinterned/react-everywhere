@@ -9,6 +9,9 @@
 # production
 /build
 
+# sketch
+/plugin.sketchplugin
+
 # misc
 .DS_Store
 .env.local
