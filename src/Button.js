@@ -1,13 +1,13 @@
-import styled, {css} from 'styled-components/primitives';
+import styled from 'styled-components/primitives';
 
-const color = "blue";
-const backgroundColor = "white";
+const color = 'blue';
+const backgroundColor = 'white';
 
 const theme = {
   backgroundColor,
   borderColor: color,
-  color,
-}
+  color
+};
 
 const ButtonText = styled.Text`
   display: inline-block;
@@ -20,7 +20,7 @@ const ButtonText = styled.Text`
   border-radius: 4px;
 `;
 ButtonText.defaultProps = {
-  theme,
+  theme
 };
 
 export default ButtonText;

@@ -3,22 +3,20 @@ import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import Theme from './Theme';
 
-addDecorator(story => (
+addDecorator(story =>
   <Theme>
     {story()}
   </Theme>
-));
+);
 
 const req = require.context(
-  "../src",       // path where stories live
-  true,           // recursive?
-  /\.story.js$/, // story files match this pattern
+  '../src', // path where stories live
+  true, // recursive?
+  /\.story.js$/ // story files match this pattern
 );
 
 function loadStories() {
-  req.keys().forEach(
-    module => req(module)
-  );
+  req.keys().forEach(module => req(module));
 }
 
 configure(loadStories, module);
