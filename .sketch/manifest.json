@@ -5,7 +5,7 @@
 		{
 			"name": "GO: Button",
 			"identifier": "main",
-			"script": "./index.js"
+			"script": "../src/Button.sketch.js"
 		}
 	],
 	"menu": {

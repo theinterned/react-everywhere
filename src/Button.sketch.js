@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, Artboard, View } from 'react-sketchapp';
-import Button from '../src/Button';
+import Button from './Button.js';
 
 const theme = {
   color: 'white',
