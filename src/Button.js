@@ -4,10 +4,16 @@ const color = 'blue';
 const backgroundColor = 'white';
 const borderColor = color;
 
-const theme = {
+export const buttonTheme = {
   backgroundColor,
   borderColor,
   color
+};
+
+export const submitTheme = {
+  backgroundColor: color,
+  borderColor,
+  color: 'white'
 };
 
 const Button = styled.Text`
@@ -22,7 +28,7 @@ const Button = styled.Text`
 `;
 
 Button.defaultProps = {
-  theme
+  theme: buttonTheme
 };
 
 export default Button;

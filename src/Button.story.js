@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components/primitives';
-import Button from './Button';
+import Button, { submitTheme } from './Button';
 
 const View = styled.View`flex-direction: row;`;
 
@@ -23,10 +23,5 @@ storiesOf('Button', module)
     </View>
   )
   .add('Styled button', () => {
-    const theme = {
-      color: 'white',
-      borderColor: 'pink',
-      backgroundColor: 'rebeccapurple'
-    };
-    return <Button theme={theme}>A styled Button</Button>;
+    return <Button theme={submitTheme}>A styled Button</Button>;
   });
