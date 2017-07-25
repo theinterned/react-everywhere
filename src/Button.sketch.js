@@ -1,12 +1,6 @@
 import React from 'react';
 import { render, Artboard, View } from 'react-sketchapp';
-import Button from './Button.js';
-
-const theme = {
-  color: 'white',
-  borderColor: 'pink',
-  backgroundColor: 'rebeccapurple'
-};
+import Button, { submitTheme} from './Button.js';
 
 const viewStyle = {
   width: 800,
@@ -26,7 +20,7 @@ export default context => {
       </Artboard>
 
       <Artboard name="Themed Button" style={artboardStyle}>
-        <Button theme={theme}>Themed Button</Button>
+        <Button theme={submitTheme}>Themed Button</Button>
       </Artboard>
     </View>,
     context.document.currentPage()
